@@ -5,7 +5,8 @@ public class MaxNumber {
         int max = num1;
         if (max < num2) {
             max = num2;
-        } else if (max < num3) {
+        }
+        if (max < num3) {
             max = num3;
         }
         return max;
