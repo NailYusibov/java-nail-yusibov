@@ -11,5 +11,4 @@ public class MaxNumberTest {
         int result = MaxNumber.max(9, 3, 5);
         assertEquals(9, result);
     }
-
 }
