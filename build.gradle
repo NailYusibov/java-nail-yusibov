@@ -43,6 +43,10 @@ pmd {
     ruleSetFiles = files("config/pmd/pmd-ruleset.xml")
     ruleSets = [] // disable default rules
 }
+pmdMain {
+    exclude "**/*Test.java"
+}
+
 
 tasks.withType(Checkstyle).configureEach {
     reports {
