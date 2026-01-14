@@ -1,9 +1,8 @@
 package org.example.chapter01.task01;
 
-import org.junit.jupiter.api.Test;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
 
 public class MaxSumArrayElementTest {
     @Test
@@ -14,7 +13,9 @@ public class MaxSumArrayElementTest {
         long result = calculation.sumAboveAverage(input);
         assertEquals(expected, result);
     }
-    void maxSumTest(){
+
+    @Test
+    void maxSumTest() {
         MaxSumArrayElement calculation = new MaxSumArrayElement();
         int max = Integer.MAX_VALUE;
         int[] input = {max, max - 1, max - 1};

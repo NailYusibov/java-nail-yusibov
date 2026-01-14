@@ -1,7 +1,7 @@
 package org.example.chapter01.task01;
 
 public class MaxSumArrayElement {
-    public long sumAboveAverage(int[] numbers) {
+    public long sumAboveAverage(int... numbers) {
         if (numbers == null || numbers.length == 0) {
             return 0;
         }
@@ -18,6 +18,4 @@ public class MaxSumArrayElement {
         }
         return resultSum;
     }
-
 }
-
