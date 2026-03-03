@@ -1,9 +1,11 @@
-package org.example.chapter01.task01;
+package org.example.chapter01.task03;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+
+// Определить, является ли число простым
 
 public class PrimeNumberTest {
 

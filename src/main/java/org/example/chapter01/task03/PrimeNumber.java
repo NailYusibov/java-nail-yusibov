@@ -1,4 +1,6 @@
-package org.example.chapter01.task01;
+package org.example.chapter01.task03;
+
+// Определить, является ли число простым
 
 public class PrimeNumber {
 

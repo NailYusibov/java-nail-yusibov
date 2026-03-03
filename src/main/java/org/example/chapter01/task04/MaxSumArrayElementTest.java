@@ -1,12 +1,14 @@
-package org.example.chapter01.task01;
+package org.example.chapter01.task04;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
+// Найти сумму элементов массива, которые больше среднего арифметического.
+
 public class MaxSumArrayElementTest {
     @Test
-    void zeroofEptyArray() {
+    void zeroOfEmptyArray() {
         MaxSumArrayElement calculation = new MaxSumArrayElement();
         int[] input = {};
         long expected = 0;

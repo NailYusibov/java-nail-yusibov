@@ -1,4 +1,6 @@
-package org.example.chapter01.task01;
+package org.example.chapter01.task04;
+
+// Найти сумму элементов массива, которые больше среднего арифметического.
 
 public class MaxSumArrayElement {
     public long sumAboveAverage(int... numbers) {

@@ -1,9 +1,11 @@
-package org.example.chapter01.task01;
+package org.example.chapter01.task02;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+
+// Написать метод для определения i-го бита числа с помощью битовых операций.
 
 public class BitCounterTest {
 

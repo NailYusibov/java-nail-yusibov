@@ -1,5 +1,7 @@
 package org.example.chapter01.task01;
 
+// Найти максимум из 3-x чисел с помощью if
+
 public class MaxNumber {
     public static int max(int num1, int num2, int num3) {
         int max = num1;
