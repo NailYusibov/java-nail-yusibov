@@ -1,9 +1,11 @@
 package org.example.chapter01.task02;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 // Написать метод для определения i-го бита числа с помощью битовых операций.
 
@@ -17,5 +19,12 @@ public class BitCounterTest {
         int actual = bitCounter.getBitNum(number, position);
 
         assertEquals(expected, actual);
+    }
+
+    @ParameterizedTest
+    @ValueSource(ints = {-1, 32})
+    void shouldThrowForInvalidPosition(int position) {
+        BitCounter bitCounter = new BitCounter();
+        assertThrows(IllegalArgumentException.class, () -> bitCounter.getBitNum(13, position));
     }
 }
