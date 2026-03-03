@@ -2,7 +2,6 @@ package org.example.chapter01.task06;
 
 import java.math.BigInteger;
 
-
 public class BigIntCount {
     public BigInteger factorial(int number) {
         if (number < 0) {

@@ -1,8 +1,8 @@
 package org.example.chapter01.task05;
 
-import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+
+import org.junit.jupiter.api.Test;
 
 // Написать метод для сортировки массива пузырьком
 
@@ -14,7 +14,7 @@ public class ArrBubbleSortTest {
 
         sortet.sort(input);
 
-        assertArrayEquals(new int[]{}, input);
+        assertArrayEquals(new int[] {}, input);
     }
 
     @Test
@@ -24,7 +24,7 @@ public class ArrBubbleSortTest {
 
         sortet.sort(input);
 
-        assertArrayEquals(new int[]{5}, input);
+        assertArrayEquals(new int[] {5}, input);
     }
 
     @Test
@@ -34,7 +34,7 @@ public class ArrBubbleSortTest {
 
         sortet.sort(input);
 
-        assertArrayEquals(new int[]{1, 2, 3, 4}, input);
+        assertArrayEquals(new int[] {1, 2, 3, 4}, input);
     }
 
     @Test
@@ -44,7 +44,7 @@ public class ArrBubbleSortTest {
 
         sortet.sort(input);
 
-        assertArrayEquals(new int[]{2,3,4,5}, input);
+        assertArrayEquals(new int[] {2, 3, 4, 5}, input);
     }
 
     @Test
@@ -54,6 +54,6 @@ public class ArrBubbleSortTest {
 
         sortet.sort(input);
 
-        assertArrayEquals(new int[]{2,3,4,6,7}, input);
+        assertArrayEquals(new int[] {2, 3, 4, 6, 7}, input);
     }
 }

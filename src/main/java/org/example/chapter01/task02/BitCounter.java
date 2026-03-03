@@ -4,7 +4,6 @@ package org.example.chapter01.task02;
 
 public class BitCounter {
 
-
     public int getBitNum(int number, int position) {
         return (number >> position) & 1;
     }
