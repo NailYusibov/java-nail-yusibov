@@ -12,7 +12,6 @@ public class BigIntCountTest {
     @ParameterizedTest
     @CsvSource({"0, 1", "1, 1", "2, 2", "3, 6", "5, 120", "10, 3628800"})
     void shouldCalculateFactorial(int number, String expectedValue) {
-
         BigIntCount count = new BigIntCount();
         BigInteger expected = new BigInteger(expectedValue);
 
@@ -23,7 +22,6 @@ public class BigIntCountTest {
 
     @Test
     void shouldThrowExceptionWhenNumberIsNegative() {
-
         BigIntCount count = new BigIntCount();
         int number = -1;
 
