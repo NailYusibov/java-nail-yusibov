@@ -1,0 +1,44 @@
+# Название процесса (workflow), который будет выполняться в GitHub Actions
+name: CI on pull request
+
+# Указываем, при каких событиях запускать этот workflow
+on:
+  # Запускать, когда кто-то делает push в ветку main или master
+  push:
+    branches: [ "main", "master" ]
+  # Запускать, когда создают или обновляют pull request
+  pull_request:
+    branches: [ "**" ]  # "**" означает — для любых веток
+
+# Здесь описываются все задания (jobs), которые нужно выполнить
+jobs:
+  # Название задания (может быть любое)
+  build:
+    # Указываем, на какой виртуальной машине будет выполняться код
+    runs-on: ubuntu-latest  # Ubuntu — это операционная система Linux
+
+    # Набор шагов, которые выполняются последовательно
+    steps:
+      # 1️⃣ Загружаем код репозитория, чтобы можно было с ним работать
+      - name: Checkout repository
+        uses: actions/checkout@v4  # Готовый экшен от GitHub
+
+      # 2️⃣ Устанавливаем Java, чтобы можно было запускать Gradle-проекты
+      - name: Set up JDK
+        uses: actions/setup-java@v4  # Ещё один готовый экшен
+        with:
+          distribution: temurin      # Temurin — это распространённая сборка Java
+          java-version: "21"         # Указываем нужную версию Java
+          cache: gradle              # Включаем кеширование Gradle (ускоряет сборку)
+
+      # 3️⃣ Делаем скрипт gradlew исполняемым (иначе его нельзя запустить)
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew  # "chmod +x" даёт право на выполнение файла
+
+      # 4️⃣ Проверяем код на стиль и форматирование с помощью Spotless
+      - name: Run Spotless check
+        run: ./gradlew spotlessCheck  # Spotless проверяет, правильно ли оформлен код
+
+      # 5️⃣ Запускаем тесты проекта
+      - name: Run tests
+        run: ./gradlew test  # Команда Gradle для запуска всех unit-тестов
